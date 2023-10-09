@@ -1,4 +1,6 @@
-# Curso de Java - Rocketseat
+<h2 align="center">
+  <img width="550px" src="https://github.com/lucarauj/Curso-Java-Rocketseat/blob/main/Curso%20Java%20-%20Rocketseat.jpg">
+</h2>
 
 <br>
 
@@ -19,3 +21,15 @@
 ## Dependências
 
 - Spring Web
+
+<br>
+
+## Anotações
+
+<br>
+
+# 👨🏼‍🎓 Aluno
+
+Lucas Araujo
+
+<a href="https://www.linkedin.com/in/lucarauj"><img alt="lucarauj | LinkdeIN" width="40px" src="https://user-images.githubusercontent.com/43545812/144035037-0f415fc7-9f96-4517-a370-ccc6e78a714b.png" /></a>
