@@ -26,6 +26,11 @@
 
 ## Anotações
 
+- @RestController
+- @RequestMapping
+- @RequestBody
+- @PostMapping
+
 <br>
 
 # 👨🏼‍🎓 Aluno
