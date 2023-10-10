@@ -21,15 +21,25 @@
 ## Dependências
 
 - Spring Web
+- Lombok
+- Spring Data JPA
+- H2 Database
 
 <br>
 
 ## Anotações
 
+- @Autowired
+- @Column
+- @Data
+- @Entity
+- @GeneratedValue
+- @GetMapping
+- @Id
+- @PostMapping
 - @RestController
 - @RequestMapping
 - @RequestBody
-- @PostMapping
 
 <br>
 
