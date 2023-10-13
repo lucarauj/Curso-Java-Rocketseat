@@ -24,6 +24,7 @@
 - Lombok
 - Spring Data JPA
 - H2 Database
+- Bcrypt
 
 <br>
 
@@ -31,6 +32,7 @@
 
 - @Autowired
 - @Column
+- @Component
 - @Data
 - @Entity
 - @GeneratedValue
@@ -40,6 +42,7 @@
 - @RestController
 - @RequestMapping
 - @RequestBody
+
 
 <br>
 

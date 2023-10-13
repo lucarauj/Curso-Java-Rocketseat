@@ -17,7 +17,7 @@ public class User {
     private UUID id;
     @Column(unique = true)
     private String username;
-    private String nome;
+    private String name;
     private String password;
     @CreationTimestamp
     private LocalDateTime createdAt;
