@@ -33,8 +33,10 @@
 - @Autowired
 - @Column
 - @Component
+- @ControllerAdvice
 - @Data
 - @Entity
+- @ExceptionHandler
 - @GeneratedValue
 - @GetMapping
 - @Id
