@@ -13,6 +13,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import static org.springframework.web.servlet.function.ServerResponse.status;
+
 @RestController
 @RequestMapping("/tasks")
 public class TaskController {
@@ -48,10 +50,21 @@ public class TaskController {
     }
 
     @PutMapping("/{id}")
-    public Task update(@PathVariable UUID id, @RequestBody Task task, HttpServletRequest request) {
+    public ResponseEntity update(@PathVariable UUID id, @RequestBody Task task, HttpServletRequest request) {
 
         var taskResult = taskRepository.findById(id).orElse(null);
+
+        if(taskResult == null) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Task não encontrada");
+        }
+
+        var idUser = request.getAttribute("idUser");
+        if(!taskResult.getIdUser().equals(idUser)) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Task não pertence ao usuário");
+        }
+
         Utils.CopyNonNullProperties(task, taskResult);
-        return taskRepository.save(taskResult);
+        var taskUpdate = taskRepository.save(taskResult);
+        return ResponseEntity.status(HttpStatus.OK).body(taskUpdate);
     }
 }
