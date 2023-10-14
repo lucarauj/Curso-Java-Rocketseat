@@ -1,15 +1,17 @@
 package br.com.todolist.task;
 
-import br.com.todolist.user.User;
 import br.com.todolist.user.UserRepository;
+import br.com.todolist.utils.Utils;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.net.URI;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/tasks")
@@ -22,30 +24,34 @@ public class TaskController {
     UserRepository userRepository;
 
     @PostMapping
-    public ResponseEntity create(@RequestBody Task task) {
-        Task title = taskRepository.findByTitleIgnoreCase(task.getTitle());
-        if(title != null) {
-//          return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Título já utilizado");
-            return ResponseEntity.badRequest().body("Título já utilizado");
+    public ResponseEntity create(@RequestBody Task task, HttpServletRequest request) {
+
+        task.setIdUser((UUID) request.getAttribute("idUser"));
+        var currentDate = LocalDateTime.now();
+
+        if(task.getStartAt().isBefore(currentDate)) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Data de início precisa ser futura");
         }
 
-//        Optional userId = userRepository.findById(task.getIdUser());
-//        if(userId.isEmpty()) {
-//          return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuário não encontrado");
-//            return ResponseEntity.badRequest().body("Usuário não encontrado");
-//        }
+        if(task.getStartAt().isAfter(task.getEndAt())) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Data final precisa ser posterior à data de início");
+        }
 
         var taskCreated = taskRepository.save(task);
-
-        URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest().path("/{id}").buildAndExpand(taskCreated.getId()).toUri();
-
-//      return ResponseEntity.status(HttpStatus.CREATED).body(userCreated);
-        return ResponseEntity.created(location).body(taskCreated);
+        return ResponseEntity.status(HttpStatus.CREATED).body(taskCreated);
     }
 
     @GetMapping
-    public List<Task> create() {
-        return taskRepository.findAll();
+    public List<Task> listByIdUser(HttpServletRequest request) {
+        var taskList = taskRepository.findByIdUser((UUID) request.getAttribute("idUser"));
+        return taskList;
+    }
+
+    @PutMapping("/{id}")
+    public Task update(@PathVariable UUID id, @RequestBody Task task, HttpServletRequest request) {
+
+        var taskResult = taskRepository.findById(id).orElse(null);
+        Utils.CopyNonNullProperties(task, taskResult);
+        return taskRepository.save(taskResult);
     }
 }

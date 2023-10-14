@@ -34,9 +34,4 @@ public class UserController {
 //      return ResponseEntity.status(HttpStatus.CREATED).body(userCreated);
         return ResponseEntity.created(location).body(userCreated);
     }
-
-    @GetMapping
-    public List<User> create() {
-        return repository.findAll();
-    }
 }

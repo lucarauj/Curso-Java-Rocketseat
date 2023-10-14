@@ -38,6 +38,7 @@
 - @GeneratedValue
 - @GetMapping
 - @Id
+- @PathVariable
 - @PostMapping
 - @RestController
 - @RequestMapping
