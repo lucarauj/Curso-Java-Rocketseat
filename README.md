@@ -4,7 +4,7 @@
 
 <br>
 
-## Projeto TO-DO LIST
+## PROJETO TO-DO LIST
 
 - AULA 1: Construção back-end de uma aplicação de To-Do List
 
@@ -18,7 +18,7 @@
 
 <br>
 
-## Dependências
+## DEPENDÊNCIAS
 
 - Spring Web
 - Lombok
@@ -28,7 +28,7 @@
 
 <br>
 
-## Anotações
+## ANOTAÇÕES
 
 - @Autowired
 - @Column
@@ -48,7 +48,7 @@
 
 <br>
 
-## Deploy no [Render](https://render.com/)
+## DEPLOY NO [RENDER](https://render.com/)
 
 - Criação do file Dockerfile:
 
@@ -74,15 +74,29 @@
 
 >*ENTRYPOINT [ "java", "-jar", "app.jar" ]*
 
+<br>
+
 - mvn clean install
 
 <br>
 
->*Para que o Deploy fosse concluído com êxito, o diretório /target, o Dockerfile e as demais pastas da aplicação devem estar na pasta principal do repositório.*
+>*Para que o Deploy seja concluído com êxito, o diretório /target, o Dockerfile e as demais pastas da aplicação devem estar na pasta principal do repositório.*
 
 <br>
 
-# 👨🏼‍🎓 Aluno
+## DEPLOY
+
+<img width="1200px" src="https://github.com/lucarauj/Curso-Java-Rocketseat/blob/main/images/deploy.png">
+
+<br>
+
+## CONSUMINDO A URL APÓS DEPLOY
+
+<img width="900px" src="https://github.com/lucarauj/Curso-Java-Rocketseat/blob/main/images/postman-deploy.png">
+
+<br>
+
+# 👨🏼‍🎓 ALUNO
 
 Lucas Araujo
 
