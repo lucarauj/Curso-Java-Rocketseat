@@ -96,6 +96,32 @@
 
 <br>
 
+## MELHORIAS FUTURAS
+
+- Transferir as regras de negócios da Controller para Service;
+
+- Criar métodos (no TaskController):
+
+>*(@GetMapping) listAllTasks;*
+
+>*(@GetMapping) getTaskById;*
+
+>*(@DeleteMapping) deleteTask;*
+
+<br>
+
+- Criar métodos (no UserController):
+
+>*(@GetMapping) listAllUsers;*
+
+>*(@GetMapping) getUserById;*
+
+>*(@PutMapping) updateUser;*
+
+>*(@DeleteMapping) deleteUser;*
+
+<br>
+
 # 👨🏼‍🎓 ALUNO
 
 Lucas Araujo
