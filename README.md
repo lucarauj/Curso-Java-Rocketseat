@@ -69,6 +69,10 @@
 
 <br>
 
+>*Para que o Deploy fosse concluído com êxito, o diretório /target, o Dockerfile e as demais pastas da aplicação devem estar na pasta principal do repositório.*
+
+<br>
+
 # 👨🏼‍🎓 Aluno
 
 Lucas Araujo
