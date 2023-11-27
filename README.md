@@ -30,21 +30,21 @@
 
 ## ANOTAÇÕES
 
-- @Autowired
-- @Column
-- @Component
-- @ControllerAdvice
-- @Data
-- @Entity
-- @ExceptionHandler
-- @GeneratedValue
-- @GetMapping
-- @Id
-- @PathVariable
-- @PostMapping
-- @RestController
-- @RequestMapping
-- @RequestBody
+- [@Autowired](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@Column](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@Component](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@ControllerAdvice](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@Data](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@Entity](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@ExceptionHandler](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@GeneratedValue](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@GetMapping](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@Id](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@PathVariable](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@PostMapping](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@RestController](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@RequestMapping](https://github.com/lucarauj/Anotacoes-Spring-Framework)
+- [@RequestBody](https://github.com/lucarauj/Anotacoes-Spring-Framework)
 
 <br>
 
